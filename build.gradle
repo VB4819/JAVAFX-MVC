@@ -1,0 +1,20 @@
+plugins {
+    id 'application'
+}
+
+mainClassName = 'Main'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.openjfx:javafx-controls:17'
+    implementation 'org.openjfx:javafx-fxml:17'
+    implementation 'mysql:mysql-connector-java:8.0.26'
+}
+
+application {
+    mainModule = 'javafx-mvc-project'
+    applicationDefaultJvmArgs = ['--module-path', classpath.asPath, '--add-modules', 'javafx.controls,javafx.fxml']
+}
